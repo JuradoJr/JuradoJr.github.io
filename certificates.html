@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
       <div class="logo">Jorge Jurado</div>
       <div>
@@ -23,6 +24,7 @@
       </div>
     </nav>
 
+    <!-- Hamburger Menu for Mobile -->
     <nav id="hamburger-nav">
       <div class="logo">Jorge Jurado</div>
       <div class="hamburger-menu">
@@ -42,24 +44,26 @@
 
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Certificates</h1>
+      <h1 class="title">Credentials</h1>
 
       <!-- Filter Row -->
       <div class="filter-container">
         <button class="filter-btn" onclick="filterProjects('all')">All</button>
-        <button class="filter-btn" onclick="filterProjects('university')">University</button>
-        <button class="filter-btn" onclick="filterProjects('online-course')">Online Course</button>
+        <button class="filter-btn" onclick="filterProjects('Degrees')">Degrees</button>
+        <button class="filter-btn" onclick="filterProjects('Certificates')">Certificates</button>
+        <button class="filter-btn" onclick="filterProjects('Awards')">Awards</button>
       </div>
 
       <!-- Projects Container -->
       <div class="projects-container">
-        <!-- Project 1 -->
-        <div class="details-container color-container university">
+        <!-- Degrees 1-->
+        <div class="details-container color-container Degrees">
           <div class="article-container">
             <img
               src="assets/Certificates/Data Analytics Certificate-1.png"
               alt="Project 1"
               class="project-img"
+              style="max-width: 100%; height: auto;"
             />
           </div>
           <h2 class="experience-sub-title project-title">UC Berkeley Data Analytics Certificate</h2>
@@ -73,13 +77,14 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="details-container color-container online-course">
+        <!-- Certificate 1 -->
+        <div class="details-container color-container Certificates">
           <div class="article-container">
             <img
               src="assets/Certificates/Tableau Fundamentals-1.png"
               alt="Project 2"
               class="project-img"
+              style="max-width: 100%; height: auto;"
             />
           </div>
           <h2 class="experience-sub-title project-title">UC Davis - Data Visualization with Tableau</h2>
@@ -93,13 +98,14 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="details-container color-container online-course">
+        <!-- Certificate 2 -->
+        <div class="details-container color-container Certificates">
           <div class="article-container">
             <img
               src="assets/Certificates/SQL Certificate-1.png"
               alt="Project 3"
               class="project-img"
+              style="max-width: 100%; height: auto;"
             />
           </div>
           <h2 class="experience-sub-title project-title">SQL for Data Science</h2>
@@ -113,13 +119,14 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
-        <div class="details-container color-container online-course">
+        <!-- Certificate 3 -->
+        <div class="details-container color-container Certificates">
           <div class="article-container">
             <img
               src="assets/Certificates/SQL Certificate-1.png"
               alt="Project 4"
               class="project-img"
+              style="max-width: 100%; height: auto;"
             />
           </div>
           <h2 class="experience-sub-title project-title">Project Four</h2>
@@ -132,6 +139,48 @@
             </button>
           </div>
         </div>
+
+        <!-- Awards 1 -->
+        <div class="details-container color-container Awards">
+            <div class="article-container">
+              <img
+                src="assets/Certificates/deanslist.png"
+                alt="Project 3"
+                class="project-img"
+                style="max-width: 100%; height: auto;"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Dean's List (7 Times)</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://www.credly.com/org/cal-state-east-bay/badge/dean-s-list', '_blank');"
+              >
+                View Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Awards 2 -->
+        <div class="details-container color-container Awards">
+            <div class="article-container">
+              <img
+                src="assets/Certificates/Honorslist.png"
+                alt="Project 3"
+                class="project-img"
+                style="max-width: 100%; height: auto;"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Honors List</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://www.credly.com/org/cal-state-east-bay/badge/honors-list', '_blank');"
+              >
+                View Certificate
+              </button>
+            </div>
+          </div>
       </div>
 
       <img
@@ -142,9 +191,7 @@
       />
     </section>
 
-    <!-- Link to your external JavaScript file -->
-    <script src="certificate.js"></script>
-
+    <!-- Contact Section -->
     <section id="contact">
       <p class="section__text__p1">Get in Touch</p>
       <h1 class="title">Contact Me</h1>
@@ -168,6 +215,7 @@
       </div>
     </section>
 
+    <!-- Footer Section -->
     <footer>
       <nav>
         <div class="nav-links-container">
@@ -182,6 +230,7 @@
       <p>Copyright &#169; 2025 Jorge Jurado. All Rights Reserved.</p>
     </footer>
 
+    <script src="certificate.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
