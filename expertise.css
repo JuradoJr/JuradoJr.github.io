@@ -1,0 +1,54 @@
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-bottom: 30px; /* Increased margin to create more breathing room */
+  }
+  
+  .filter-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px; /* Rounded corners for a more modern look */
+    border: none;
+    background: linear-gradient(135deg, #006d6b, #4a9c9a); /* Elegant deep teal gradient */
+    color: white;
+    text-transform: uppercase; /* For a modern, techy feel */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .filter-btn:hover {
+    background: linear-gradient(135deg, #005a57, #339d96); /* Darker gradient on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
+    transform: translateY(-2px); /* Slight "lift" effect */
+  }
+  
+  .filter-btn:focus {
+    outline: none; /* Removes the default outline when focused */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Highlight the button when focused */
+  }
+  
+  .filter-btn:active {
+    transform: translateY(0); /* Button "pressed" effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow when clicked */
+  }
+  
+  .projects-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+      gap: 20px; /* space between items */
+    }
+    
+    @media (max-width: 768px) {
+      .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .projects-container {
+        grid-template-columns: 1fr; /* 1 item per row for mobile */
+      }
+    }

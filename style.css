@@ -375,10 +375,12 @@ article .icon {
 }
 
 .project-img {
-  border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;          /* Make the width flexible */
+  height: 300px;        /* Fixed height for consistency */
+  object-fit: contain;  /* Ensures the entire image fits within the container without distortion */
+  border-radius: 8px;   /* Optional: Adds rounded corners */
 }
+
 
 .project-title {
   margin: 1rem;
