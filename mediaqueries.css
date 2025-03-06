@@ -1,103 +1,106 @@
+/* Responsive Layout: 1400px and below */
 @media screen and (max-width: 1400px) {
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
   }
   .about-containers {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow about containers to wrap for smaller screens */
   }
   #contact,
   #projects {
-    height: fit-content;
+    height: fit-content; /* Ensure sections don't have excessive height */
   }
 }
 
+/* Responsive Layout: 1200px and below */
 @media screen and (max-width: 1200px) {
   #desktop-nav {
-    display: none;
+    display: none; /* Hide desktop navigation */
   }
   #hamburger-nav {
-    display: flex;
+    display: flex; /* Show hamburger navigation on smaller screens */
   }
   #experience,
   .experience-details-container {
-    margin-top: 2rem;
+    margin-top: 2rem; /* Space between sections */
   }
   #profile,
   .section-container {
-    display: block;
+    display: block; /* Make sections block-level */
   }
   .arrow {
-    display: none;
+    display: none; /* Hide arrow on smaller screens */
   }
   section,
   .section-container {
-    height: fit-content;
+    height: fit-content; /* Sections will adjust based on content */
   }
   section {
-    margin: 0 5%;
+    margin: 0 5%; /* Add horizontal margin to sections */
   }
   .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+    width: 275px; /* Set fixed width for images */
+    height: 275px; /* Set fixed height for images */
+    margin: 0 auto 2rem; /* Center images and add bottom margin */
   }
   .about-containers {
-    margin-top: 0;
+    margin-top: 0; /* Remove extra margin on about containers */
   }
 }
 
+/* Responsive Layout: 600px and below */
 @media screen and (max-width: 600px) {
   #contact,
   footer {
-    height: 40vh;
+    height: 40vh; /* Reduce the height of contact and footer */
   }
   #profile {
-    height: 83vh;
-    margin-bottom: 0;
+    height: 83vh; /* Keep profile height consistent */
+    margin-bottom: 0; /* Remove bottom margin for better layout on mobile */
   }
   article {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjust font size for smaller screens */
   }
   footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+    height: fit-content; /* Ensure footer nav adjusts to content */
+    margin-bottom: 2rem; /* Add margin to bottom of footer */
   }
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow flex containers to wrap */
   }
   .contact-info-container {
-    margin: 0;
+    margin: 0; /* Remove margin from contact info container */
   }
   .contact-info-container p,
   .nav-links li a {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjust font size for better readability */
   }
   .experience-sub-title {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Adjust experience subtitle size */
   }
   .logo {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjust logo size on smaller screens */
   }
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    flex-direction: column; /* Stack navigation items vertically */
+    gap: 0.5rem; /* Add spacing between navigation items */
+    text-align: center; /* Center text in nav links */
   }
   .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+    width: auto; /* Allow images to scale to the container width */
+    height: 46vw; /* Adjust height to maintain aspect ratio */
+    justify-content: center; /* Center image within the container */
   }
   .section__text__p2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; /* Adjust text size for readability */
   }
   .title {
-    font-size: 2rem;
+    font-size: 2rem; /* Adjust title font size */
   }
   .text-container {
-    text-align: justify;
+    text-align: justify; /* Justify text for better readability */
   }
 }

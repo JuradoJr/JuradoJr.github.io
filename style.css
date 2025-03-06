@@ -190,8 +190,7 @@ section {
 }
 
 .section__text__p2 {
-  font-size: 1.5
-rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -210,8 +209,9 @@ rem;
 /* ICONS */
 .icon {
   cursor: pointer;
-  height: 4rem;
-
+  height: 3rem;  /* Set a consistent height for all icons */
+  width: auto;   /* Automatically adjust the width based on height */
+  object-fit: contain;
 }
 
 .icon2 {
@@ -221,7 +221,11 @@ rem;
   object-fit: contain; /* Ensures the icon maintains its aspect ratio */
 }
 
-
+/* Ensure that email and LinkedIn icons are the same size */
+.email-icon, .contact-icon {
+  height: 3rem;  /* Match the size of other icons */
+  width: auto;
+}
 
 /* BUTTONS */
 
@@ -381,7 +385,6 @@ article .icon {
   border-radius: 8px;   /* Optional: Adds rounded corners */
 }
 
-
 .project-title {
   margin: 1rem;
   color: black;
@@ -429,7 +432,8 @@ article .icon {
 }
 
 .email-icon {
-  height: 2.5rem;
+  height: 3rem; /* Updated to match other icons */
+  width: auto;
 }
 
 /* FOOTER SECTION */

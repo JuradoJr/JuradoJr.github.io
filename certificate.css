@@ -3,6 +3,8 @@
   justify-content: center;
   gap: 20px; /* Space between buttons */
   margin-bottom: 30px; /* Increased margin to create more breathing room */
+  flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+  justify-content: space-evenly; /* Ensures buttons are spaced evenly */
 }
 
 .filter-btn {
@@ -17,6 +19,8 @@
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for hover effects */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  min-width: 150px; /* Ensures buttons maintain a decent size even on small screens */
+  text-align: center; /* Centers the text */
 }
 
 .filter-btn:hover {
@@ -36,19 +40,50 @@
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-    gap: 20px; /* space between items */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* space between items */
+}
+
+@media (max-width: 1024px) {
+  .filter-container {
+    gap: 15px; /* Reduce gap for medium screens like tablets */
+    justify-content: flex-start; /* Align buttons to the left for medium screens */
   }
-  
-  @media (max-width: 768px) {
-    .projects-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
-    }
+
+  .filter-btn {
+    padding: 10px 25px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Smaller font size on medium screens */
   }
-  
-  @media (max-width: 480px) {
-    .projects-container {
-      grid-template-columns: 1fr; /* 1 item per row for mobile */
-    }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
   }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    gap: 10px; /* Reduced gap on smaller screens */
+    justify-content: center; /* Center buttons for small screens */
+  }
+
+  .filter-btn {
+    padding: 8px 20px; /* Further reduce padding for small screens */
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row for smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-btn {
+    padding: 8px 15px; /* Smaller padding for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 item per row for mobile */
+  }
+}

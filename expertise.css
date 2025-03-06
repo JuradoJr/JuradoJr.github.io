@@ -1,10 +1,14 @@
+/* Filter Container */
 .filter-container {
     display: flex;
     justify-content: center;
     gap: 20px; /* Space between buttons */
     margin-bottom: 30px; /* Increased margin to create more breathing room */
+    flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+    justify-content: space-evenly; /* Spread buttons evenly */
   }
   
+  /* Filter Button */
   .filter-btn {
     padding: 12px 30px;
     font-size: 16px;
@@ -17,38 +21,62 @@
     cursor: pointer;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 5px; /* Space between buttons on smaller screens */
+    min-width: 150px; /* Ensure buttons do not shrink too much */
+    text-align: center; /* Center button text */
   }
   
+  /* Button Hover Effect */
   .filter-btn:hover {
     background: linear-gradient(135deg, #005a57, #339d96); /* Darker gradient on hover */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
     transform: translateY(-2px); /* Slight "lift" effect */
   }
   
+  /* Button Focus Effect */
   .filter-btn:focus {
     outline: none; /* Removes the default outline when focused */
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Highlight the button when focused */
   }
   
+  /* Button Active Effect */
   .filter-btn:active {
     transform: translateY(0); /* Button "pressed" effect */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow when clicked */
   }
   
+  /* Projects Container Layout */
   .projects-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 items per row */
-      gap: 20px; /* space between items */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px; /* space between items */
+    margin-top: 20px; /* Adds some space between the filter and project items */
+  }
+  
+  /* Responsive Layout: Tablets */
+  @media (max-width: 1024px) {
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
     }
-    
-    @media (max-width: 768px) {
-      .projects-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 items per row for tablets */
-      }
+    .filter-btn {
+      padding: 10px 25px; /* Slightly smaller padding for tablets */
+      font-size: 14px; /* Adjust font size for readability */
     }
-    
-    @media (max-width: 480px) {
-      .projects-container {
-        grid-template-columns: 1fr; /* 1 item per row for mobile */
-      }
+  }
+  
+  /* Responsive Layout: Mobile */
+  @media (max-width: 480px) {
+    .projects-container {
+      grid-template-columns: 1fr; /* 1 item per row for mobile */
     }
+    .filter-btn {
+      padding: 8px 20px; /* Smaller padding for mobile */
+      font-size: 12px; /* Adjust font size for smaller screens */
+      width: 100%; /* Buttons will take up the full width of the container */
+    }
+    .filter-container {
+      gap: 10px; /* Less gap between buttons on mobile */
+      justify-content: space-between; /* Align buttons in a more spread-out way */
+    }
+  }
+  
